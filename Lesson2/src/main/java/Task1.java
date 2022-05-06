@@ -33,4 +33,4 @@ public class Task1 {
         return Math.sqrt(a * a + b * b);
     }
 }
-
+//
