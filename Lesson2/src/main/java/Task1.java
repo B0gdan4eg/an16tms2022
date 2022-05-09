@@ -22,8 +22,9 @@ public class Task1 {
     public static int sum(int a, int b) {
         if (Integer.MAX_VALUE - a < b){
             return -1;
+        }  else {
+            return a + b;
         }
-        return a + b;
     }
     public static int max(int a, int b) {
         return Math.max(a, b);
