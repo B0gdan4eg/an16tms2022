@@ -9,7 +9,7 @@ public class Task5 {
         System.out.println(operation(0));
         System.out.println(calculateCountOfOddElementsInMatrix(new int[]{1, 2, 3, 4, 5, 6}));
         countDevs(103);
-        countDevs(11);
+        countDevs(505);
         foobar(6);
         foobar(10);
         foobar(15);
@@ -44,17 +44,14 @@ public class Task5 {
     }
 
     public static int operation(int number) {
-        int num = number;
-        if (number == 0) {
-            num = 10;
+        if (number > 0) {
+            number += 1;
+        } else if (number < 0) {
+            number -= 2;
+        } else if (number == 0) {
+            number += 10;
         }
-        if (number >= 0) {
-            num++;
-        }
-        if (number < 0) {
-            num -= 2;
-        }
-        return num;
+        return number;
     }
 
     public static int calculateCountOfOddElementsInMatrix(int[] ints) {
@@ -71,11 +68,10 @@ public class Task5 {
         int rem = count % 100;
         if (rem < 11 || rem > 14) {
             rem = count % 10;
-            if (rem == 1) {
-                System.out.println("Программист");
-            }
-            if (rem >= 2 && rem <= 4) {
-                System.out.println("Программиста");
+            switch (rem) {
+                case 1 -> System.out.println("Программист");
+                case 2, 3, 4 -> System.out.println("Программиста");
+                default -> System.out.println("Программистов");
             }
         } else {
             System.out.println("Программистов");
@@ -102,10 +98,11 @@ public class Task5 {
             for (j = 2; j <= i / j; j++) {
                 if ((i % j) == 0) {
                     isPrime = false;
+                    break;
                 }
-                if (isPrime) {
-                    System.out.println(i + " - простое число.");
-                }
+            }
+            if (isPrime) {
+                System.out.println(i + " - простое число.");
             }
         }
     }
