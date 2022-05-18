@@ -1,35 +1,48 @@
 package by.tms.model;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class Computer {
     public String cpu;
-    public int rem;
+    public int ram;
     public int memory;
+    public int cycleResource;
+    public boolean burnt;
 
+    public Computer(String cpu, int ram, int memory, int cycleResource) {
+        this.cpu = cpu;
+        this.ram = ram;
+        this.memory = memory;
+        this.cycleResource = cycleResource;
+    }
+
+    public void getInfo() {
+        System.out.print("(" + cpu + ") ");
+        System.out.print("(" + ram + ") ");
+        System.out.print("(" + memory + ") ");
+        System.out.println("(" + cycleResource + ") ");
+    }
+
+    public void on() {
+        System.out.println("Р’РЅРёРјР°РЅРёРµ! Р’РІРµРґРёС‚Рµ 0 РёР»Рё 1");
+        Random random = new Random();
+        Scanner in = new Scanner(System.in);
+        int r = random.nextInt(2);
+        int my = in.nextInt();
+        if (r == my && cycleResource > 0) {
+            System.out.println("Р’РєР»СЋС‡РµРЅРёРµ");
+        } else {
+            System.out.println("РљРѕРјРїСЊСЋС‚РµСЂ СЃРіРѕСЂРµР»!");
+            burnt = true;
+            cycleResource = 0;
+        }
+    }
+
+    public void off() {
+        if (!burnt) {
+            System.out.println("Р’С‹РєР»СЋС‡РµРЅРёРµ РєРѕРјРїСЊСЋС‚РµСЂР°");
+            cycleResource--;
+        }
+    }
 }
-/**
- * 1) класс Computer будет содержать следующие поля:
- * - процессор
- * - оперативка
- * - жесткий диск
- * - ресурс полных циклов работы (включился выключился это один цикл)
- * <p>
- * 2) класс Computer будет содержать следующие методы:
- * - метод описание(вывод всех полей)
- * - метод включить (on())
- * - при включении может произойти сбои?, поэтому при вызове метода on() необходимо написать следующую логику:
- * на консоль вывести сообщение (Внимание! Введите 0 или 1)
- * создать экземпляр класса Random, который будет генерировать число 0 или 1.
- * если введенное вами число совпадет с рандомным, то компьютер выключается.
- * если введенное вами число не совпадет с рандомным, то компьютер сгорает.
- * - при повторном включении компьютера, если он сгорел необходимо выдать сообщение "Компьютер сгорел!"
- * - выключить (off()) Проверяем если компьютер не сгорел то пишем "Выключение компьютера" и уменьшаем счетчик
- * ресурса полных циклов работы
- * - при превышении лимита ресурса комп сгорает. Пишем сообщение "Компьютер сгорел!"
- * <p>
- * 3) создать пакет by.tms.service
- * создать класс Main создать метод main
- * создать экземпляр класса Computer или реальный объект, через конструктор передать значение полей класса,
- * т.е необходимо сгенерировать конструктор с полями класса перечисленными в 1 пункте
- * Далее у объекта Computer вызвать его методы, в которых будет реализована логика по включению, выключению
- * и выводу информации про него.
- */

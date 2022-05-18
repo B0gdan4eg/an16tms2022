@@ -8,6 +8,6 @@ public class Main {
         System.out.println(user);
         user.ageIncrease();
         System.out.println(user.age);
-        System.out.println(user.getNameSur());
+        System.out.println(user.getFullName());
     }
 }

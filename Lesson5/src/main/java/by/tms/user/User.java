@@ -24,7 +24,7 @@ public class User {
                 '}';
     }
 
-    public String getNameSur() {
+    public String getFullName() {
         return surname + " " + name;
     }
 
