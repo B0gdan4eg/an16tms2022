@@ -49,7 +49,7 @@ public class Task5 {
         } else if (number < 0) {
             number -= 2;
         } else if (number == 0) {
-            number += 10;
+            number = 10;
         }
         return number;
     }
