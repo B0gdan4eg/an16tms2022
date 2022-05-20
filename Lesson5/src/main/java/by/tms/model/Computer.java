@@ -8,7 +8,7 @@ public class Computer {
     public int ram;
     public int memory;
     public int cycleResource;
-    public boolean burnt;
+    public boolean burned;
 
     public Computer(String cpu, int ram, int memory, int cycleResource) {
         this.cpu = cpu;
@@ -25,24 +25,32 @@ public class Computer {
     }
 
     public void on() {
+        if (cycleResource > 0) {
+            checkAction();
+        } else {
+            System.out.println("Компьютер сгорел!");
+        }
+    }
+
+    public void off() {
+        if (!burned) {
+            System.out.println("Выключение компьютера");
+            cycleResource--;
+        }
+    }
+
+    private void checkAction() {
         System.out.println("Внимание! Введите 0 или 1");
         Random random = new Random();
         Scanner in = new Scanner(System.in);
         int r = random.nextInt(2);
         int my = in.nextInt();
-        if (r == my && cycleResource > 0) {
+        if (r == my) {
             System.out.println("Включение");
         } else {
             System.out.println("Компьютер сгорел!");
-            burnt = true;
+            burned = true;
             cycleResource = 0;
-        }
-    }
-
-    public void off() {
-        if (!burnt) {
-            System.out.println("Выключение компьютера");
-            cycleResource--;
         }
     }
 }
