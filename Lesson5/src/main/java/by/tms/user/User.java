@@ -28,7 +28,7 @@ public class User {
         return surname + " " + name;
     }
 
-    public void ageIncrease() {
+    public void increaseAge() {
         this.age += 1;
     }
 }
