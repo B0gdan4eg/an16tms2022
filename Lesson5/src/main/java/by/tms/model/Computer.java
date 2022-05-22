@@ -25,10 +25,12 @@ public class Computer {
     }
 
     public void on() {
-        if (cycleResource > 0) {
-            checkAction();
+        if (checkAction()) {
+            System.out.println("Включение компьютера");
         } else {
             System.out.println("Компьютер сгорел!");
+            burned = true;
+            cycleResource = 0;
         }
     }
 
@@ -39,18 +41,12 @@ public class Computer {
         }
     }
 
-    private void checkAction() {
+    private boolean checkAction() {
         System.out.println("Внимание! Введите 0 или 1");
         Random random = new Random();
         Scanner in = new Scanner(System.in);
         int r = random.nextInt(2);
         int my = in.nextInt();
-        if (r == my) {
-            System.out.println("Включение");
-        } else {
-            System.out.println("Компьютер сгорел!");
-            burned = true;
-            cycleResource = 0;
-        }
+        return r == my;
     }
 }
