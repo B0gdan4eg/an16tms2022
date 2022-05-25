@@ -25,7 +25,7 @@ public class Computer {
     }
 
     public void on() {
-        if (checkAction()) {
+        if (checkAction() && cycleResource > 0) {
             System.out.println("Включение компьютера");
         } else {
             System.out.println("Компьютер сгорел!");
