@@ -7,7 +7,7 @@ import lombok.ToString;
 
 @ToString
 public class Car {
-    private Engine engine = new Engine("ДВС", 0.3);
+    private final Engine engine = new Engine("ДВС", 0.3);
     private String model;
     private GasTank gasTank;
     private int range;
@@ -17,6 +17,7 @@ public class Car {
         this.gasTank = gasTank;
         this.range = range;
     }
+
 
     public void go() {
         if (start()) {
@@ -69,10 +70,6 @@ public class Car {
 
     public Engine getEngine() {
         return engine;
-    }
-
-    private void setEngine(Engine engine) {
-        this.engine = engine;
     }
 
     public String getModel() {

@@ -23,5 +23,7 @@ public class Main {
 
         MilitaryOffice militaryOffice = new MilitaryOffice(new PersonRegistry(people));
         System.out.println(militaryOffice.getRecruitsWithName("Alex"));
+        System.out.println(militaryOffice.getRecruitsWithAge(24, 27));
+        System.out.println(militaryOffice.getRecruitsWithCountry("Belarus"));
     }
 }
