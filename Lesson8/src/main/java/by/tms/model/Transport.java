@@ -22,4 +22,8 @@ public class Transport {
                 ", brand= '" + brand + '\'' +
                 " }";
     }
+
+    public double powerIntKV() {
+        return getPower() * 0.74;
+    }
 }

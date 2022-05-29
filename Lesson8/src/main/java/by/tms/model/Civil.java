@@ -25,6 +25,6 @@ public class Civil extends Air {
 
     @Override
     public String toString() {
-        return super.toString() + " " + numOfPassengers + " " + business + getPower() * 0.74;
+        return super.toString() + " " + numOfPassengers + " " + business + powerIntKV();
     }
 }

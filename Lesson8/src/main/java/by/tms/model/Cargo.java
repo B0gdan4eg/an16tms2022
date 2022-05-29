@@ -13,7 +13,7 @@ public class Cargo extends Ground {
         this.loadCapacity = loadCapacity;
     }
 
-    public String placeThisLoad(int load) {
+    public String placeThisLoad(double load) {
         if (loadCapacity >= load) {
             return "Грузовик загружен";
         } else {
@@ -23,6 +23,6 @@ public class Cargo extends Ground {
 
     @Override
     public String toString() {
-        return super.toString() + " " + loadCapacity + getPower() * 0.74;
+        return super.toString() + " " + loadCapacity + powerIntKV();
     }
 }

@@ -34,6 +34,6 @@ public class Military extends Air {
 
     @Override
     public String toString() {
-        return super.toString() + " " + ejectionSystem + " " + numOfMissiles + getPower() * 0.74;
+        return super.toString() + " " + ejectionSystem + " " + numOfMissiles + powerIntKV();
     }
 }
