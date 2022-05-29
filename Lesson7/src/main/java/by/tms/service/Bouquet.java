@@ -8,14 +8,13 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Bouquet {
-    private Flower[] bouquet;
+    private Flowers[] bouquet;
 
-    public int checkCost() {
+    public String checkCost() {
         int bouquetCost = 0;
-        Flower[] flowers = getBouquet();
-        for (Flower flower : bouquet) {
-            bouquetCost += flower.getCost();
+        for (Flowers flowers : bouquet) {
+            bouquetCost += flowers.getCost();
         }
-        return bouquetCost;
+        return "All cost: " + bouquetCost;
     }
 }

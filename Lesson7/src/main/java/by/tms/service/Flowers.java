@@ -4,16 +4,27 @@ import lombok.Getter;
 
 @Getter
 public enum Flowers {
-    ROSE("ROSE"),
-    LILY("LILY"),
-    ASTER("ASTER"),
-    HERBERA("HERBERA"),
-    TULIP("TULIP"),
-    CARNATION("CARNATION");
+    ROSE("ROSE", 15),
+    LILY("LILY", 7),
+    ASTER("ASTER", 5),
+    HERBERA("HERBERA", 5),
+    TULIP("TULIP", 8),
+    CARNATION("CARNATION", 11);
 
-    private final String name;
+    private String name;
+    private int cost;
 
-    Flowers(String name) {
+    Flowers(String name, int cost) {
         this.name = name;
+        this.cost = cost;
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
     }
 }
