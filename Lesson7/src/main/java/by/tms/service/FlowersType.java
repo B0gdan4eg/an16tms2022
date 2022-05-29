@@ -3,7 +3,7 @@ package by.tms.service;
 import lombok.Getter;
 
 @Getter
-public enum Flowers {
+public enum FlowersType {
     ROSE("ROSE", 15),
     LILY("LILY", 7),
     ASTER("ASTER", 5),
@@ -14,7 +14,7 @@ public enum Flowers {
     private String name;
     private int cost;
 
-    Flowers(String name, int cost) {
+    FlowersType(String name, int cost) {
         this.name = name;
         this.cost = cost;
     }
