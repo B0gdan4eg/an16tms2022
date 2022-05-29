@@ -4,7 +4,7 @@ package by.tms.model;
 public enum Season {
     SUMMER(25, "best season") {
         @Override
-        public void getDescription(Season season) {
+        public void getDescription() {
             System.out.println("Warm");
         }
     },
@@ -36,7 +36,7 @@ public enum Season {
         }
     }
 
-    public void getDescription(Season season) {
+    public void getDescription() {
         System.out.println("too cold");
     }
 }
