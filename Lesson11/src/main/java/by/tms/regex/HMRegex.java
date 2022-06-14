@@ -23,7 +23,7 @@ public class HMRegex {
         }
         System.out.println(Arrays.toString(text2.split("[^a-zA-Z]+")));
         System.out.println(StringHelper.validate("ssss_"));
-        System.out.println(StringHelper.validate("ssss1214214"));
+        System.out.println(StringHelper.validate("ssss1234514214"));
         System.out.println(StringHelper.validate("ssss8"));
     }
 }
