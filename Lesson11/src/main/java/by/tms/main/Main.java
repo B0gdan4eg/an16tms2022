@@ -7,8 +7,8 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(StringHelper.FromFirsAtoLastB("asfasfsafsaAdfsfsdB"));
-        System.out.println(StringHelper.Pos3ToPos0("123456"));
+        System.out.println(StringHelper.fromFirsAtoLastB("asfasfsafsaAdfsfsdB"));
+        System.out.println(StringHelper.pos3ToPos0("123456"));
         System.out.println(Arrays.toString(StringHelper.palindromeCheck("sds sdasd reeer ewrew")));
         StringHelper.countOfSentences("Hello my friend.How are you doing sds.", 1, 3);
         System.out.println(StringHelper.middleOfWord("string"));

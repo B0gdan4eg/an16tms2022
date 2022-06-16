@@ -1,5 +1,5 @@
 package by.tms.model;
 
-public interface generateReport {
+public interface GenerateReport {
     void report();
 }

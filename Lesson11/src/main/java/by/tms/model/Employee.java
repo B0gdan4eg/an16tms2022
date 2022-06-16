@@ -5,7 +5,7 @@ import lombok.ToString;
 
 @AllArgsConstructor
 @ToString
-public class Employee implements generateReport {
+public class Employee implements GenerateReport {
     private double salary;
     private String fullName;
 

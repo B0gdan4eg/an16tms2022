@@ -5,11 +5,11 @@ import java.util.regex.Pattern;
 
 public final class StringHelper {
 
-    public static String FromFirsAtoLastB(String str) {
+    public static String fromFirsAtoLastB(String str) {
         return str.substring(str.indexOf('A'), str.lastIndexOf('B') + 1);
     }
 
-    public static String Pos3ToPos0(String str) {
+    public static String pos3ToPos0(String str) {
         if (str.length() < 4) {
             return "Строка слишком кароткая";
         }
