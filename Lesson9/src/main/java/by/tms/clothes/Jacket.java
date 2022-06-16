@@ -1,7 +1,7 @@
 package by.tms.clothes;
 
 public interface Jacket {
-    boolean putOn();
+    void putOn();
 
-    boolean putOff();
+    void putOff();
 }

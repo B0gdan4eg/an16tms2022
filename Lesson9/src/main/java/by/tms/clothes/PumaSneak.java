@@ -3,7 +3,7 @@ package by.tms.clothes;
 import lombok.ToString;
 
 @ToString
-public class PumaJacket implements Jacket {
+public class PumaSneak implements Sneakers {
     public boolean onPerson;
 
     @Override
@@ -16,3 +16,4 @@ public class PumaJacket implements Jacket {
         onPerson = false;
     }
 }
+
