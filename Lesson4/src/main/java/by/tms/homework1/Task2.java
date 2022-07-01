@@ -1,3 +1,5 @@
+package by.tms.homework1;
+
 import java.util.Scanner;
 
 public class Task2 {
