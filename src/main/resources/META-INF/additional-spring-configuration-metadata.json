@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "bot.token",
+      "type": "java.lang.String",
+      "description": "5499430832:AAHBYcnObgCBfh3mrAJBqURtl920d661qHA"
+    },
+    {
+      "name": "bot.name",
+      "type": "java.lang.String",
+      "description": "TravelHelperBot"
+    }
+  ] }
