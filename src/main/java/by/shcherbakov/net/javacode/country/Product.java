@@ -17,7 +17,7 @@ public class Product {
     private String description;
 
 
-    protected Product() {
+    public Product() {
     }
 
     @Id

@@ -1,4 +1,4 @@
-package by.shcherbakov.telegram;
+package by.shcherbakov;
 
 
 import org.springframework.boot.SpringApplication;
