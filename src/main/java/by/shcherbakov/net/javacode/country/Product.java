@@ -11,13 +11,13 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @Entity
-public class Country {
+public class Product {
     private Long id;
     private String country;
     private String description;
 
 
-    protected Country() {
+    protected Product() {
     }
 
     @Id
